@@ -12,29 +12,51 @@ const projects = {
     bullets: ["Real-time embedded implementation", "High-speed electromechanical actuation", "Sensor integration and filtering", "Iterative validation using physical test hardware"]
   },
   pcb: {
-    type: "Electronics · Embedded hardware",
-    title: "Custom PCB Design and Bring-up",
-    lead: "Custom electronics developed from system requirements through schematic capture, layout, manufacture and hardware–software integration.",
-    sections: [
-      ["Design context", "Use this section to explain what each board was responsible for and the constraints that shaped it: dimensions, power, interfaces, sensing, environmental conditions and integration requirements."],
-      ["My contribution", "Describe your individual ownership clearly. Include component selection, schematic design, layout, design reviews, manufacturing liaison, assembly, firmware support and bring-up work where applicable."],
-      ["Validation", "Show how you proved the board worked. Strong evidence includes current consumption, interface tests, oscilloscope captures, thermal observations, fault investigation and photographs of the board operating in the final system."],
-      ["What changed", "Document one revision or design trade-off. Explaining why a component, connector, topology or layout changed is often more compelling than only showing the finished board."]
+  type: "Electronics · Embedded systems",
+  title: "Rocketry Avionics and Embedded Electronics",
+  lead: "A collection of custom electronic systems developed for sensing, data acquisition, control, communication and power distribution aboard high-powered rockets.",
+
+  sections: [
+    [
+      "System context",
+      "Rocket avionics must operate within tight constraints on size, mass, power and reliability while interfacing with sensors, actuators, communications hardware and other subsystems. I contributed to the design and integration of custom PCBs that supported these functions across multiple rocketry projects."
     ],
-    bullets: ["Requirements-driven electronics", "Schematic capture and PCB layout", "Manufacturing and assembly", "Bring-up, debugging and integration"]
-  },
-  ai: {
-    type: "AI systems · Software architecture",
-    title: "Scalable Multistage AI Pipeline",
-    lead: "A modular pipeline for running image generation, vision-language reasoning, segmentation and dataset production across high-performance servers and constrained edge environments.",
-    sections: [
-      ["System challenge", "The workflow combines heterogeneous models and data products while preserving traceability between prompts, generated imagery, detections, masks and exported datasets."],
-      ["Architecture", "The system uses discrete configurable stages, persistent artifact metadata and file-backed storage for large outputs. This allows models to be replaced, individual stages to be rerun and outputs to be traced through the complete workflow."],
-      ["Engineering focus", "The work spans Python software architecture, GPU inference, Linux server operation, database design, deployment constraints and standards-compliant COCO export."],
-      ["R&D constraints", "The pipeline was developed in a fast-moving research environment where solutions needed to be useful quickly, make sensible use of available compute and remain flexible as models and requirements changed."]
+    [
+      "Sensor acquisition",
+      "The electronics interfaced with inertial, pressure and other onboard sensors to capture vehicle state and environmental data. Designs considered signal integrity, sampling requirements, digital communication interfaces and reliable operation in electrically and mechanically demanding conditions."
     ],
-    bullets: ["Python and typed data models", "GPU inference and model serving", "Artifact lineage and persistence", "Modular processing stages", "Server-to-edge deployment"]
-  }
+    [
+      "Processing and storage",
+      "Microcontrollers provided real-time coordination of sensor acquisition, system logic and peripheral control. Onboard storage enabled high-rate flight and test data to be retained for later analysis, validation and debugging."
+    ],
+    [
+      "Actuation and control",
+      "The boards provided interfaces for controlling electromechanical systems, including servo and other actuator outputs. This required careful consideration of timing, current demand, protection and separation between sensitive logic and higher-power loads."
+    ],
+    [
+      "Communications",
+      "Integrated communication interfaces enabled data exchange between onboard subsystems and external equipment. These links supported configuration, telemetry, debugging and coordination between distributed electronic systems."
+    ],
+    [
+      "Power architecture",
+      "Power circuitry converted and distributed energy from onboard batteries to microcontrollers, sensors, communications hardware and actuators. Designs incorporated voltage regulation, decoupling, protection and appropriate power-domain separation to maintain stable operation under changing loads."
+    ],
+    [
+      "Development and validation",
+      "The development process covered requirements definition, component selection, schematic capture, PCB layout, manufacture, assembly, bring-up and system integration. Boards were progressively validated through bench testing, firmware development and integration with the wider vehicle."
+    ]
+  ],
+
+  bullets: [
+    "Microcontroller-based embedded systems",
+    "Inertial and environmental sensor acquisition",
+    "Onboard flight-data storage",
+    "Actuator and servo control interfaces",
+    "Inter-board and external communications",
+    "Battery power regulation and distribution",
+    "PCB bring-up, debugging and system integration"
+  ]
+}
 };
 
 const dialog = document.querySelector("#project-dialog");

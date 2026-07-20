@@ -415,3 +415,10 @@ h1 {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+.project-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
